@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="../../css/sign-up.css">
+<link rel="stylesheet" href="../../css/star-rating.css">
+<div class="signup-form">
+    <form action="/reviews/new" method="post">
+      <legend>Review a User</legend>
+      {{> reviews-form}}
+      <div class='text-right'>
+        <button type="submit" class="btn btn-primary">Create Review</button>
+      </div>
+    </form>
+	<div class="text-center"><a href="/">Cancel</a></div>
+</div>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../css/nav.css">
+{{!-- <link rel="stylesheet" href="../../css/nav.css"> --}}
 {{!-- <nav class="navbar navbar-light bg-light">
     <div class="container" style= "padding-right: 0px; padding-left: 0px;">
         <a class="navbar-brand" href="/">
@@ -38,14 +38,25 @@
 </a>
 
 <ul>
+    {{#if currentUser}}
+    <li><a href="/listings/new" class="btn btn-primary navbar-btn">New Listing</a></li>
+    <a href="/reviews/new" class="btn btn-primary navbar-btn">New Review</a>
+    <li><a href="/logout" class="btn btn-primary navbar-btn">Log Out</a></li>
+    {{else}}
     <li style="float:right"><a href="/sign-up"><button class="btn btn-primary" type="submit">Sign Up</button>
     </a></li>
     <li style="float:right"><a href="/login"><button class="btn btn-primary">Login</button>
     </a></li>
+    {{/if}}
     
 </ul>
 
 </nav>
+  
+<div class="container">
+    <a href="/listings" class="btn btn-primary navbar-btn">Listings</a>
+    <a href="/reviews" class="btn btn-primary navbar-btn">Reviews</a>
+</div>
 
 {{!-- <div class="container">
  

@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <ul>
+            <a href="/">Back to Homepage</a>
+            {{#each listings}}
+                <li class="list-group-item">
+                    <div class="lead"><a href="/listings/{{this._id}}">{{this.title}}</a></div>
+                    <p>{{this.address}}</p>
+                    <p>{{this.rent}}</p>
+                    <p><a href="{{this.author.username}}"><small>{{this.author.username}}</small></a></p>
+                    <a href="/upload"><button type="submit" class="btn btn-primary btn-block">Apply Now</button></a>
+                    <div class="text-right">
+                        <a href="{{this.district}}">{{this.district}}
+                    </a></div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

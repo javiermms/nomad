@@ -1,0 +1,38 @@
+{{!-- <div class="row">
+  <div class="col-sm-4 col-sm-offset-4">
+    <form action="/listings/new" method="post">
+      <legend>New Listing</legend>
+      <div class="form-group">
+        <label for="listing-title">Title</label>
+        <input type="title" name="title" class="form-control" id="title">
+      </div>
+      <div class="form-group">
+        <label for="listing-address">Street Address</label>
+        <input type="address" name="address" class="form-control" id="listing-address" placeholder="123 Street Name Ave">
+      </div>
+      <div class="form-group">
+        <label for="listing-rent">Rent Amount</label>
+        <input type="rent" name="rent" class="form-control" id="listing-rent" placeholder="$0.00">
+      </div>
+      <div class="form-group">
+        <label for="listing-description">Description</label>
+        <textarea type="description" name="description" class="form-control" id="listing-description"></textarea>
+      </div>
+      <div class='text-right'>
+        <button type="submit" class="btn btn-primary">Create Listing</button>
+      </div>
+    </form>
+  </div>
+</div> --}}
+
+<link rel="stylesheet" href="../../css/sign-up.css">
+<div class="signup-form">
+    <form action="/listings/new" method="post">
+      <legend>New Listing</legend>
+      {{> listings-form}}
+      <div class='text-right'>
+        <button type="submit" class="btn btn-primary">Create Listing</button>
+      </div>
+    </form>
+	<div class="text-center"><a href="/">Cancel</a></div>
+</div>
